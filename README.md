@@ -104,7 +104,7 @@ time :
 give it the Function abbreviation :directory>python function
 example :
 
-Implimentation_01>python experement_ex1.py FTR
+>python experement_ex1.py FTR
 
 ### 3.2 best-improvement
 
@@ -154,7 +154,7 @@ to lunch the experiment on terminal i did it this way do i can do multiples expe
 time :
 give it the Function abbreviation :directory>python experement_ex1.py function
 example :
-Implimentation_01>python experement_ex1.py BTR
+>python experement_ex1.py BTR
 
 
 
@@ -225,7 +225,7 @@ I creat a function that take the 3 function above in the order given and return 
 completion times, Sum of completion times
 To run one of the orders on a file do :directory>python experement_ex1.py order
 example :
-\Implimentation_01>python experement_ex1.py VNDFO|
+>python experement_ex1.py VNDFO|
 
 ### 4.3 Experiment
 
@@ -247,7 +247,7 @@ function :
 2. get experement VND01 result
 to run the experement do :directory>python VND_Algo.py order file_name n°machine
 example :
-Implimentation_01>python VND_Algo.py VNDFO 50_20_02 20
+>python VND_Algo.py VNDFO 50_20_02 20
 
 ### 4.4 Average
 
