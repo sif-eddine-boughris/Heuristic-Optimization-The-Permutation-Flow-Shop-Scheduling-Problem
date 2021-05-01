@@ -42,12 +42,13 @@ In the class Methods I create a function for :
 8. get all the possible insert neighbourhood
 In the class Simplified RZ heuristic :
 1. get the Initial solution
-to try a file with this function call :
+to try a file with this function call :
+
 directory>python SRZH File_name n°machine
+
 example :
-´´´
-PycharmProjects\Implimentation_01>python Simplified_RZ_heuristic.py SRZH 50_20_01 20
-´´´
+>PycharmProjects\Implimentation_01>python Simplified_RZ_heuristic.py SRZH 50_20_01 20
+
 
 
 
@@ -69,10 +70,13 @@ Sum of completion times and Weighted sum of completion times :
 to try one of the code on a file run :
 for Random prmutation you need to give it the filename and the job n° and machine n° :
 directory>python first_improvment.py function File_name n°job n°machine
-for Simplified RZ heuristic you need to give it the file name and the machine n° :
+for Simplified RZ heuristic you need to give it the file name and the machine n°:
+
 directory>python first_improvment.py function File_name n°machine
+
 example :
-python first_improvment.py FTR 50_20_01 20
+
+>python first_improvment.py FTR 50_20_01 20
 
 #### 3.1.2 experiment
 
@@ -99,6 +103,7 @@ to lunch the experiment on terminal i did it this way do i can do multiples expe
 time :
 give it the Function abbreviation :directory>python function
 example :
+
 Implimentation_01>python experement_ex1.py FTR
 
 ### 3.2 best-improvement
@@ -120,8 +125,11 @@ to try one of the code on a file run :
 for Random prmutation you need to give it the filename and the job n° and machine n° :
 directory>python best_improvment.py function File_name n°job n°machine
 for Simplified RZ heuristic you need to give it the file name and the machine n° :
+
 directory>python best_improvment.py function File_name n°machine
+
 example :
+
 >python best_improvment.py BTR 50_20_01 20
 
 #### 3.2.2 experiment
