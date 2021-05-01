@@ -71,7 +71,7 @@ directory>python first_improvment.py function File_name n°job n°machine
 for Simplified RZ heuristic you need to give it the file name and the machine n° :
 directory>python first_improvment.py function File_name n°machine
 example :
->python first_improvment.py FTR 50_20_01 20
+python first_improvment.py FTR 50_20_01 20
 
 #### 3.1.2 experiment
 
@@ -238,7 +238,7 @@ function :
 2. get experement VND01 result
 to run the experement do :directory>python VND_Algo.py order file_name n°machine
 example :
-\Implimentation_01>python VND_Algo.py VNDFO 50_20_02 20
+Implimentation_01>python VND_Algo.py VNDFO 50_20_02 20
 
 ### 4.4 Average
 
