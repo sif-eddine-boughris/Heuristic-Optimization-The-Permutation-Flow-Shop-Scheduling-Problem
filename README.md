@@ -45,8 +45,9 @@ In the class Simplified RZ heuristic :
 to try a file with this function call :
 directory>python SRZH File_name n°machine
 example :
+´´´
 PycharmProjects\Implimentation_01>python Simplified_RZ_heuristic.py SRZH 50_20_01 20
-
+´´´
 
 
 
