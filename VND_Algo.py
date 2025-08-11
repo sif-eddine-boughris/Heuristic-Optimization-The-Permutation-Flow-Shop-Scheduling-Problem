@@ -91,15 +91,16 @@ def VND_second_order(csv,machine):
     return msct3,min3
 
 
-import sys
-process_arg1=sys.argv[1]
-process_arg2=sys.argv[2]
-process_arg3=sys.argv[3]
-if process_arg1=='VNDFO':
-    print('Starting the ' + process_arg1 + '...')
-    print(VND_first_order(process_arg2,int(process_arg3)))
-    print(process_arg1 + 'is donne!')
-if process_arg1=='VNDSO':
-    print('Starting the ' + process_arg1 + '...')
-    print(VND_first_order(process_arg2,int(process_arg3)))
-    print(process_arg1 + 'is donne!')
+if __name__ == "__main__":
+    import sys
+    process_arg1=sys.argv[1]
+    process_arg2=sys.argv[2]
+    process_arg3=sys.argv[3]
+    if process_arg1=='VNDFO':
+        print('Starting the ' + process_arg1 + '...')
+        print(VND_first_order(process_arg2,int(process_arg3)))
+        print(process_arg1 + 'is donne!')
+    if process_arg1=='VNDSO':
+        print('Starting the ' + process_arg1 + '...')
+        print(VND_first_order(process_arg2,int(process_arg3)))
+        print(process_arg1 + 'is donne!')
