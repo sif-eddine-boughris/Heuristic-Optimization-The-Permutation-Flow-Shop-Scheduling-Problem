@@ -94,13 +94,15 @@ def Simplified_RZ_heuristic(file,machine):# give it the file name return the sol
 
 #print(Simplified_RZ_heuristic("test",3))
 
-import sys
-process_arg1=sys.argv[1]
-process_arg2=sys.argv[2]
-process_arg3=sys.argv[3]
-if process_arg1=='SRZH':
-    print('Starting the ' + process_arg1 + '...')
-    print(Simplified_RZ_heuristic(process_arg2,int(process_arg3)))
-    print(process_arg1 + ' is donne!')
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) >= 2:
+        process_arg1=sys.argv[1]
+        process_arg2=sys.argv[2] if len(sys.argv) > 2 else None
+        process_arg3=sys.argv[3] if len(sys.argv) > 3 else None
+        if process_arg1=='SRZH':
+            print('Starting the ' + process_arg1 + '...')
+            print(Simplified_RZ_heuristic(process_arg2,int(process_arg3)))
+            print(process_arg1 + ' is donne!')
 
 

@@ -140,33 +140,35 @@ def best_improvement_Insert_Simplified_RZ_heuristic(csv, machine):#give it the c
 #print(best_improvement_Insert_Random_permutation('50_20_01',50,20))
 
 
-import sys
-process_arg1=sys.argv[1]
-process_arg2=sys.argv[2]
-process_arg3=sys.argv[3]
-process_arg4=sys.argv[4]
-if process_arg1=='BTR':
-    print('Starting the ' + process_arg1 + '...')
-    print(best_improvement_Transpose_Random_permutation(process_arg2,int(process_arg3),int(process_arg4)))
-    print(process_arg1 + 'is donne!')
-if process_arg1=='BER':
-    print('Starting the ' + process_arg1 + '...')
-    print(best_improvement_Exchange_Random_permutation(process_arg2,int(process_arg3),int(process_arg4)))
-    print(process_arg1 + 'is donne!')
-if process_arg1=='BIR':
-    print('Starting the ' + process_arg1 + '...')
-    print(best_improvement_Insert_Random_permutation(process_arg2,int(process_arg3),int(process_arg4)))
-    print(process_arg1 + 'is donne!')
-if process_arg1=='BTRZ':
-    print('Starting the ' + process_arg1 + '...')
-    print(best_improvement_Transpose_Simplified_RZ_heuristic(process_arg2,int(process_arg3)))
-    print(process_arg1 + 'is donne!')
-if process_arg1=='BIRZ':
-    print('Starting the ' + process_arg1 + '...')
-    print(best_improvement_Insert_Simplified_RZ_heuristic(process_arg2,int(process_arg3)))
-    print(process_arg1 + 'is donne!')
-if process_arg1=='BERZ':
-    print('Starting the ' + process_arg1 + '...')
-    print(best_improvement_Exchange_Simplified_RZ_heuristic(process_arg2,int(process_arg3)))
-    print(process_arg1 + 'is donne!')
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) >= 2:
+        process_arg1=sys.argv[1]
+        process_arg2=sys.argv[2] if len(sys.argv) > 2 else None
+        process_arg3=sys.argv[3] if len(sys.argv) > 3 else None
+        process_arg4=sys.argv[4] if len(sys.argv) > 4 else None
+        if process_arg1=='BTR':
+            print('Starting the ' + process_arg1 + '...')
+            print(best_improvement_Transpose_Random_permutation(process_arg2,int(process_arg3),int(process_arg4)))
+            print(process_arg1 + 'is donne!')
+        if process_arg1=='BER':
+            print('Starting the ' + process_arg1 + '...')
+            print(best_improvement_Exchange_Random_permutation(process_arg2,int(process_arg3),int(process_arg4)))
+            print(process_arg1 + 'is donne!')
+        if process_arg1=='BIR':
+            print('Starting the ' + process_arg1 + '...')
+            print(best_improvement_Insert_Random_permutation(process_arg2,int(process_arg3),int(process_arg4)))
+            print(process_arg1 + 'is donne!')
+        if process_arg1=='BTRZ':
+            print('Starting the ' + process_arg1 + '...')
+            print(best_improvement_Transpose_Simplified_RZ_heuristic(process_arg2,int(process_arg3)))
+            print(process_arg1 + 'is donne!')
+        if process_arg1=='BIRZ':
+            print('Starting the ' + process_arg1 + '...')
+            print(best_improvement_Insert_Simplified_RZ_heuristic(process_arg2,int(process_arg3)))
+            print(process_arg1 + 'is donne!')
+        if process_arg1=='BERZ':
+            print('Starting the ' + process_arg1 + '...')
+            print(best_improvement_Exchange_Simplified_RZ_heuristic(process_arg2,int(process_arg3)))
+            print(process_arg1 + 'is donne!')
 

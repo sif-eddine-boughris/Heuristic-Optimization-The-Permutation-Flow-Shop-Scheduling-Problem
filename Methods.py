@@ -15,18 +15,17 @@ def getDataframe(CSV, machine): # give it The csv file return the data frame
 #s = getDataframe('instances/instance2/50_20_01.csv', 20)
 
 
-def get_matrix_with_wieght(Df): #give it the data frame return th matrix with weight
+def get_matrix_with_wieght(Df): # give it the data frame return the matrix without the weight column and the weight list
     shape0, shape1 = Df.shape[0], Df.shape[1]
-    M = np.zeros((shape0, shape1), dtype=int)
+    processing_cols = shape1 - 1
+    M = np.zeros((shape0, processing_cols), dtype=int)
     w = []
-    for i in range(Df.shape[0]):
+    for i in range(shape0):
         for j in range(shape1):
-            if j ==shape1-1:
+            if j == shape1 - 1:
                 w.append(Df[i, j])
             else:
                 M[i, j] = Df[i, j]
-
-
     return M, w
 
 #DF, w = get_matrix_with_wieght(s)
@@ -38,17 +37,16 @@ def get_matrix_with_wieght(Df): #give it the data frame return th matrix with we
 def get_completion_matrix(A): # calculate the completion matrix
     shape = A.shape
     D = np.zeros(shape, dtype=int)
-    for i in range(A.shape[0]):
-        for j in range(A.shape[1]):
-            if i == 0:
+    for i in range(shape[0]):
+        for j in range(shape[1]):
+            if i == 0 and j == 0:
+                D[i, j] = A[i, j]
+            elif i == 0:
                 D[i, j] = A[i, j] + D[i, j - 1]
-            if j == 0:
+            elif j == 0:
                 D[i, j] = A[i, j] + D[i - 1, j]
-            if i > 0 and j > 0:
-                if D[i, j - 1] > D[i - 1, j]:
-                    D[i, j] = A[i, j] + D[i, j - 1]
-                else:
-                    D[i, j] = A[i, j] + D[i - 1, j]
+            else:
+                D[i, j] = A[i, j] + max(D[i, j - 1], D[i - 1, j])
     return D
 
 
